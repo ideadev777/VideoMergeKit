@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="/">
+    <file>res/icon/link.png</file>
+    <file>res/icon/loading.gif</file>
+    <file>res/icon/icon.ico</file>
+    <file>res/icon/icon.png</file>
+    <file>res/icon/pause.png</file>
+    <file>res/icon/play.png</file>
+    <file>res/icon/download.png</file>
+    <file>res/icon/drop-down-arrow.png</file>
+    <file>res/icon/merge.png</file>
+  </qresource>
+</RCC>
