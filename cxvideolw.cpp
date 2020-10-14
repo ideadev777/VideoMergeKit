@@ -42,6 +42,9 @@ void CxVideoLW::addVideo(QString filePath)
 	refitItems() ;
 	m_itemList << item ;
 	setCurrentItem(item) ;
+//	int cnt = count() ;
+//	if( cnt > 6 ) cnt = 6 ;
+//	setFixedHeight(cnt*(TRIMBARHEIGHT+spacing()*3)) ;
 }
 
 void CxVideoLW::refitItems()

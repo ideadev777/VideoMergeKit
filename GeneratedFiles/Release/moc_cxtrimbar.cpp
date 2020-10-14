@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_CxTrimBar_t {
-    QByteArrayData data[12];
-    char stringdata[99];
+    QByteArrayData data[15];
+    char stringdata[120];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -38,13 +38,17 @@ QT_MOC_LITERAL(5, 37, 9),
 QT_MOC_LITERAL(6, 47, 4),
 QT_MOC_LITERAL(7, 52, 14),
 QT_MOC_LITERAL(8, 67, 2),
-QT_MOC_LITERAL(9, 70, 12),
-QT_MOC_LITERAL(10, 83, 9),
-QT_MOC_LITERAL(11, 93, 4)
+QT_MOC_LITERAL(9, 70, 6),
+QT_MOC_LITERAL(10, 77, 6),
+QT_MOC_LITERAL(11, 84, 6),
+QT_MOC_LITERAL(12, 91, 12),
+QT_MOC_LITERAL(13, 104, 9),
+QT_MOC_LITERAL(14, 114, 4)
     },
     "CxTrimBar\0__curSeekPosChanged\0\0id\0st\0"
     "__preview\0msec\0__rangeChanged\0en\0"
-    "onSetSegment\0onSetSeek\0seek\0"
+    "__prev\0__next\0__play\0onSetSegment\0"
+    "onSetSeek\0seek\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -54,30 +58,36 @@ static const uint qt_meta_data_CxTrimBar[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       3,       // signalCount
+       6,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    2,   39,    2, 0x05,
-       5,    2,   44,    2, 0x05,
-       7,    3,   49,    2, 0x05,
+       1,    2,   54,    2, 0x05,
+       5,    2,   59,    2, 0x05,
+       7,    3,   64,    2, 0x05,
+       9,    0,   71,    2, 0x05,
+      10,    0,   72,    2, 0x05,
+      11,    0,   73,    2, 0x05,
 
  // slots: name, argc, parameters, tag, flags
-       9,    2,   56,    2, 0x0a,
-      10,    1,   61,    2, 0x0a,
+      12,    2,   74,    2, 0x0a,
+      13,    1,   79,    2, 0x0a,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    6,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    8,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QReal, QMetaType::QReal,    4,    8,
-    QMetaType::Void, QMetaType::QReal,   11,
+    QMetaType::Void, QMetaType::QReal,   14,
 
        0        // eod
 };
@@ -90,8 +100,11 @@ void CxTrimBar::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 0: _t->__curSeekPosChanged((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 1: _t->__preview((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 2: _t->__rangeChanged((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
-        case 3: _t->onSetSegment((*reinterpret_cast< qreal(*)>(_a[1])),(*reinterpret_cast< qreal(*)>(_a[2]))); break;
-        case 4: _t->onSetSeek((*reinterpret_cast< qreal(*)>(_a[1]))); break;
+        case 3: _t->__prev(); break;
+        case 4: _t->__next(); break;
+        case 5: _t->__play(); break;
+        case 6: _t->onSetSegment((*reinterpret_cast< qreal(*)>(_a[1])),(*reinterpret_cast< qreal(*)>(_a[2]))); break;
+        case 7: _t->onSetSeek((*reinterpret_cast< qreal(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -113,6 +126,24 @@ void CxTrimBar::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             typedef void (CxTrimBar::*_t)(int , int , int );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&CxTrimBar::__rangeChanged)) {
                 *result = 2;
+            }
+        }
+        {
+            typedef void (CxTrimBar::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&CxTrimBar::__prev)) {
+                *result = 3;
+            }
+        }
+        {
+            typedef void (CxTrimBar::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&CxTrimBar::__next)) {
+                *result = 4;
+            }
+        }
+        {
+            typedef void (CxTrimBar::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&CxTrimBar::__play)) {
+                *result = 5;
             }
         }
     }
@@ -143,13 +174,13 @@ int CxTrimBar::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 8;
     }
     return _id;
 }
@@ -173,5 +204,23 @@ void CxTrimBar::__rangeChanged(int _t1, int _t2, int _t3)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
+}
+
+// SIGNAL 3
+void CxTrimBar::__prev()
+{
+    QMetaObject::activate(this, &staticMetaObject, 3, 0);
+}
+
+// SIGNAL 4
+void CxTrimBar::__next()
+{
+    QMetaObject::activate(this, &staticMetaObject, 4, 0);
+}
+
+// SIGNAL 5
+void CxTrimBar::__play()
+{
+    QMetaObject::activate(this, &staticMetaObject, 5, 0);
 }
 QT_END_MOC_NAMESPACE

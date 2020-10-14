@@ -79,3 +79,8 @@ bool isValidSuffix(QString fileName)
 	if( suf == "mp4" || suf == "wmv" || suf == "avi" ) return 1 ;
 	return 0 ;
 }
+
+QString mmss( int t )
+{
+	return getTime(t).toString("mm:ss") ;
+}

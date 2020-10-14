@@ -39,4 +39,5 @@ Mat QImage2Mat(QImage const& src) ;
 videoInfo getVideoDuration(QString filePath) ;
 bool isValidSuffix(QString fileName) ;
 
+QString mmss( int t ) ;
 #endif // COMMON_H

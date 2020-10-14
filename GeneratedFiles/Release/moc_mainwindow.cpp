@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[26];
-    char stringdata[294];
+    QByteArrayData data[32];
+    char stringdata[348];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -54,7 +54,13 @@ QT_MOC_LITERAL(21, 252, 3),
 QT_MOC_LITERAL(22, 256, 9),
 QT_MOC_LITERAL(23, 266, 2),
 QT_MOC_LITERAL(24, 269, 11),
-QT_MOC_LITERAL(25, 281, 11)
+QT_MOC_LITERAL(25, 281, 11),
+QT_MOC_LITERAL(26, 293, 10),
+QT_MOC_LITERAL(27, 304, 9),
+QT_MOC_LITERAL(28, 314, 7),
+QT_MOC_LITERAL(29, 322, 6),
+QT_MOC_LITERAL(30, 329, 6),
+QT_MOC_LITERAL(31, 336, 10)
     },
     "MainWindow\0onUpload\0\0onMerge\0onPlayButton\0"
     "uploadVideo\0fileName\0onVideoSelectionChanged\0"
@@ -63,7 +69,9 @@ QT_MOC_LITERAL(25, 281, 11)
     "r\0st\0en\0onAudioStateChanged\0"
     "QMediaPlayer::State\0onSeekableChanged\0"
     "on\0onVideoPostionChanged\0pos\0onPreview\0"
-    "id\0onSeekClick\0onViewClick\0"
+    "id\0onSeekClick\0onViewClick\0onMinimize\0"
+    "onRestore\0onClose\0onNext\0onPrev\0"
+    "onSeekPlay\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -73,7 +81,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      20,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -81,20 +89,26 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   84,    2, 0x0a,
-       3,    0,   85,    2, 0x0a,
-       4,    0,   86,    2, 0x0a,
-       5,    1,   87,    2, 0x0a,
-       7,    1,   90,    2, 0x0a,
-      10,    1,   93,    2, 0x0a,
-      11,    1,   96,    2, 0x0a,
-      12,    3,   99,    2, 0x0a,
-      16,    1,  106,    2, 0x0a,
-      18,    1,  109,    2, 0x0a,
-      20,    1,  112,    2, 0x0a,
-      22,    2,  115,    2, 0x0a,
-      24,    2,  120,    2, 0x0a,
-      25,    0,  125,    2, 0x0a,
+       1,    0,  114,    2, 0x0a,
+       3,    0,  115,    2, 0x0a,
+       4,    0,  116,    2, 0x0a,
+       5,    1,  117,    2, 0x0a,
+       7,    1,  120,    2, 0x0a,
+      10,    1,  123,    2, 0x0a,
+      11,    1,  126,    2, 0x0a,
+      12,    3,  129,    2, 0x0a,
+      16,    1,  136,    2, 0x0a,
+      18,    1,  139,    2, 0x0a,
+      20,    1,  142,    2, 0x0a,
+      22,    2,  145,    2, 0x0a,
+      24,    2,  150,    2, 0x0a,
+      25,    0,  155,    2, 0x0a,
+      26,    0,  156,    2, 0x0a,
+      27,    0,  157,    2, 0x0a,
+      28,    0,  158,    2, 0x0a,
+      29,    0,  159,    2, 0x0a,
+      30,    0,  160,    2, 0x0a,
+      31,    0,  161,    2, 0x0a,
 
  // slots: parameters
     QMetaType::Void,
@@ -110,6 +124,12 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, QMetaType::LongLong,   21,
     QMetaType::Void, QMetaType::Int, QMetaType::Int,   23,   21,
     QMetaType::Void, QMetaType::Int, QMetaType::Int,   23,   21,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -134,6 +154,12 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 11: _t->onPreview((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 12: _t->onSeekClick((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 13: _t->onViewClick(); break;
+        case 14: _t->onMinimize(); break;
+        case 15: _t->onRestore(); break;
+        case 16: _t->onClose(); break;
+        case 17: _t->onNext(); break;
+        case 18: _t->onPrev(); break;
+        case 19: _t->onSeekPlay(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -175,13 +201,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 20)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 20;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 20)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 20;
     }
     return _id;
 }

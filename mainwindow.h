@@ -31,14 +31,27 @@ public slots:
 	void onSeekClick( int id, int pos ) ;
 	void onViewClick() ;
 
+	void onMinimize() ;
+	void onRestore() ;
+	void onClose() ;
+	void onNext() ;
+	void onPrev() ;
+	void onSeekPlay() ;
 protected:
 	void timerEvent(QTimerEvent* event) ;
+	void showEvent(QShowEvent* event) ;
+	void resizeEvent(QResizeEvent *event) ;
+	void mousePressEvent(QMouseEvent* event) ;
+	void mouseMoveEvent(QMouseEvent* event) ;
+	void mouseReleaseEvent(QMouseEvent *event) ;
 private:
 	void play( int id ) ;
 	void stopPlaying() ;
 	void initUI() ;
 	void initConenction() ;
 	void setEditable( bool on ) ;
+	void refit() ;
+	void resizeSeekBar() ;
 	Ui::MainWindow ui ;
 	CxVideoLW* m_resLW ;
 	CxVideoItem* m_curVideo ;
@@ -50,6 +63,12 @@ private:
 	QMediaPlayer* m_audioTrack ;
 	QTime m_startTime ;
 	CxProgressDlg* m_progressDlg ;
+	QSize m_curVideoSize ;
+	CxTrimBar* m_seekBar ;
+	bool m_isMaximized ;
+	bool m_isPressing ;
+	QPoint m_oriPnt ;
+	QRect m_oriRect, m_restoreRect ;
 };
 
 

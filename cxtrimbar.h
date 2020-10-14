@@ -7,6 +7,7 @@
 #include <QPaintEvent>
 #include <QResizeEvent>
 #include <QMouseEvent>
+#include <QToolButton>
 
 class CxTrimBar : public QLabel
 {
@@ -22,20 +23,28 @@ public:
 	void setCurSeekVisible(bool on){ m_seek->setVisible(on) ; }
 	void setVideoInfo(videoInfo info) ;
 	void setSelected( bool on ) ;
-	void setIndex( int id ){ m_id = id ; }
+	void setIndex( int id ) ;
 	void remoteSetSegment( int st, int en, bool emitSignal = false ) ;
 	videoInfo info(){ return m_info ; }
 	QImage screenshot(qint64 pos) ;
 	void setEditable( bool on ){ m_isEditable = on; }
 	void remoteSeek( qint64 pos ) ;
+	void setTransparentBar( bool on ) ;
+	void setIcon(QIcon icon, QToolButton* btn) ;
+	QToolButton* playButton(){ return m_playBtn ; }
+	void setPlayPanelVisible( bool on ) ;
 signals:
 	void __curSeekPosChanged( int id, int st ) ;
 	void __preview( int id, int msec ) ;
 	void __rangeChanged( int id, int st, int en ) ;
+	void __prev() ;
+	void __next() ;
+	void __play() ;
 public slots:
 	void onSetSegment( qreal st, qreal en ) ;
 	void onSetSeek( qreal seek ) ;
 protected:
+	void closeEvent(QCloseEvent* event) ;
 	void paintEvent(QPaintEvent* event) ;
 	void mousePressEvent(QMouseEvent* event) ;
 	void mouseMoveEvent(QMouseEvent* event) ;
@@ -54,6 +63,12 @@ private:
 	videoInfo m_info ;
 	VideoCapture m_capture ;
 	int m_id ;
+	int m_seekWidth, m_margin ;
+	bool m_isTransparentBar ;
+	QToolButton* m_prevBtn ;
+	QToolButton* m_nxtBtn ;
+	QToolButton* m_playBtn ;
+	QLabel* m_timeBar ;
 };
 
 #endif // CXTRIMBAR_H

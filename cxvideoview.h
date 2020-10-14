@@ -14,11 +14,13 @@ public:
 	void setMyImage( QImage pix ) ;
 	QVideoWidget* myVideoWidget() { return m_videoWidget ; }
 	void setVideoWidgetVisible( bool on ){ m_videoWidget->setVisible(on) ; }
+	void refit() ;
 signals:
 	void __clicked() ;
 protected:
 	void paintEvent(QPaintEvent *event) ;
 	void showEvent(QShowEvent *event) ;
+	void resizeEvent(QResizeEvent *event) ;
 	void mousePressEvent(QMouseEvent *event) ;
 private:
 	QImage m_pix ;

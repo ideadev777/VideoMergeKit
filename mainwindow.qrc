@@ -1,5 +1,17 @@
 <RCC>
   <qresource prefix="/">
+    <file>res/icon/pause_2.png</file>
+    <file>res/icon/play_2.png</file>
+    <file>res/icon/next_1.png</file>
+    <file>res/icon/prev_1.png</file>
+    <file>res/icon/next.png</file>
+    <file>res/icon/pause_1.png</file>
+    <file>res/icon/play_1.png</file>
+    <file>res/icon/prev.png</file>
+    <file>res/icon/close-window-256.png</file>
+    <file>res/icon/maximize-window-256.png</file>
+    <file>res/icon/minimize-window-256.png</file>
+    <file>res/icon/restore-window-256.png</file>
     <file>res/icon/link.png</file>
     <file>res/icon/loading.gif</file>
     <file>res/icon/icon.ico</file>
