@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[32];
-    char stringdata[348];
+    QByteArrayData data[10];
+    char stringdata[88];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,48 +30,19 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10),
-QT_MOC_LITERAL(1, 11, 8),
-QT_MOC_LITERAL(2, 20, 0),
-QT_MOC_LITERAL(3, 21, 7),
-QT_MOC_LITERAL(4, 29, 12),
-QT_MOC_LITERAL(5, 42, 11),
-QT_MOC_LITERAL(6, 54, 8),
-QT_MOC_LITERAL(7, 63, 23),
-QT_MOC_LITERAL(8, 87, 12),
-QT_MOC_LITERAL(9, 100, 4),
-QT_MOC_LITERAL(10, 105, 18),
-QT_MOC_LITERAL(11, 124, 16),
-QT_MOC_LITERAL(12, 141, 19),
-QT_MOC_LITERAL(13, 161, 1),
-QT_MOC_LITERAL(14, 163, 2),
-QT_MOC_LITERAL(15, 166, 2),
-QT_MOC_LITERAL(16, 169, 19),
-QT_MOC_LITERAL(17, 189, 19),
-QT_MOC_LITERAL(18, 209, 17),
-QT_MOC_LITERAL(19, 227, 2),
-QT_MOC_LITERAL(20, 230, 21),
-QT_MOC_LITERAL(21, 252, 3),
-QT_MOC_LITERAL(22, 256, 9),
-QT_MOC_LITERAL(23, 266, 2),
-QT_MOC_LITERAL(24, 269, 11),
-QT_MOC_LITERAL(25, 281, 11),
-QT_MOC_LITERAL(26, 293, 10),
-QT_MOC_LITERAL(27, 304, 9),
-QT_MOC_LITERAL(28, 314, 7),
-QT_MOC_LITERAL(29, 322, 6),
-QT_MOC_LITERAL(30, 329, 6),
-QT_MOC_LITERAL(31, 336, 10)
+QT_MOC_LITERAL(1, 11, 10),
+QT_MOC_LITERAL(2, 22, 0),
+QT_MOC_LITERAL(3, 23, 9),
+QT_MOC_LITERAL(4, 33, 7),
+QT_MOC_LITERAL(5, 41, 8),
+QT_MOC_LITERAL(6, 50, 8),
+QT_MOC_LITERAL(7, 59, 7),
+QT_MOC_LITERAL(8, 67, 9),
+QT_MOC_LITERAL(9, 77, 9)
     },
-    "MainWindow\0onUpload\0\0onMerge\0onPlayButton\0"
-    "uploadVideo\0fileName\0onVideoSelectionChanged\0"
-    "CxVideoItem*\0item\0onStartTimeChanged\0"
-    "onEndTimeChanged\0onVideoRangeChanged\0"
-    "r\0st\0en\0onAudioStateChanged\0"
-    "QMediaPlayer::State\0onSeekableChanged\0"
-    "on\0onVideoPostionChanged\0pos\0onPreview\0"
-    "id\0onSeekClick\0onViewClick\0onMinimize\0"
-    "onRestore\0onClose\0onNext\0onPrev\0"
-    "onSeekPlay\0"
+    "MainWindow\0onMinimize\0\0onRestore\0"
+    "onClose\0onUpload\0onRemove\0onStart\0"
+    "onSaveTxt\0onSavePdf\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -81,7 +52,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      20,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -89,41 +60,17 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  114,    2, 0x0a,
-       3,    0,  115,    2, 0x0a,
-       4,    0,  116,    2, 0x0a,
-       5,    1,  117,    2, 0x0a,
-       7,    1,  120,    2, 0x0a,
-      10,    1,  123,    2, 0x0a,
-      11,    1,  126,    2, 0x0a,
-      12,    3,  129,    2, 0x0a,
-      16,    1,  136,    2, 0x0a,
-      18,    1,  139,    2, 0x0a,
-      20,    1,  142,    2, 0x0a,
-      22,    2,  145,    2, 0x0a,
-      24,    2,  150,    2, 0x0a,
-      25,    0,  155,    2, 0x0a,
-      26,    0,  156,    2, 0x0a,
-      27,    0,  157,    2, 0x0a,
-      28,    0,  158,    2, 0x0a,
-      29,    0,  159,    2, 0x0a,
-      30,    0,  160,    2, 0x0a,
-      31,    0,  161,    2, 0x0a,
+       1,    0,   54,    2, 0x0a,
+       3,    0,   55,    2, 0x0a,
+       4,    0,   56,    2, 0x0a,
+       5,    0,   57,    2, 0x0a,
+       6,    0,   58,    2, 0x0a,
+       7,    0,   59,    2, 0x0a,
+       8,    0,   60,    2, 0x0a,
+       9,    0,   61,    2, 0x0a,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    6,
-    QMetaType::Void, 0x80000000 | 8,    9,
-    QMetaType::Void, QMetaType::QTime,    2,
-    QMetaType::Void, QMetaType::QTime,    2,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int,   13,   14,   15,
-    QMetaType::Void, 0x80000000 | 17,    2,
-    QMetaType::Void, QMetaType::Bool,   19,
-    QMetaType::Void, QMetaType::LongLong,   21,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,   23,   21,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,   23,   21,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -140,40 +87,18 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         MainWindow *_t = static_cast<MainWindow *>(_o);
         switch (_id) {
-        case 0: _t->onUpload(); break;
-        case 1: _t->onMerge(); break;
-        case 2: _t->onPlayButton(); break;
-        case 3: _t->uploadVideo((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 4: _t->onVideoSelectionChanged((*reinterpret_cast< CxVideoItem*(*)>(_a[1]))); break;
-        case 5: _t->onStartTimeChanged((*reinterpret_cast< QTime(*)>(_a[1]))); break;
-        case 6: _t->onEndTimeChanged((*reinterpret_cast< QTime(*)>(_a[1]))); break;
-        case 7: _t->onVideoRangeChanged((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
-        case 8: _t->onAudioStateChanged((*reinterpret_cast< QMediaPlayer::State(*)>(_a[1]))); break;
-        case 9: _t->onSeekableChanged((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 10: _t->onVideoPostionChanged((*reinterpret_cast< qint64(*)>(_a[1]))); break;
-        case 11: _t->onPreview((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 12: _t->onSeekClick((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 13: _t->onViewClick(); break;
-        case 14: _t->onMinimize(); break;
-        case 15: _t->onRestore(); break;
-        case 16: _t->onClose(); break;
-        case 17: _t->onNext(); break;
-        case 18: _t->onPrev(); break;
-        case 19: _t->onSeekPlay(); break;
+        case 0: _t->onMinimize(); break;
+        case 1: _t->onRestore(); break;
+        case 2: _t->onClose(); break;
+        case 3: _t->onUpload(); break;
+        case 4: _t->onRemove(); break;
+        case 5: _t->onStart(); break;
+        case 6: _t->onSaveTxt(); break;
+        case 7: _t->onSavePdf(); break;
         default: ;
         }
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        switch (_id) {
-        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 8:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QMediaPlayer::State >(); break;
-            }
-            break;
-        }
     }
+    Q_UNUSED(_a);
 }
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -201,13 +126,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 20)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 20;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 20)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 20;
+        if (_id < 8)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 8;
     }
     return _id;
 }

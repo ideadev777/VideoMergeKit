@@ -29,6 +29,14 @@ struct videoInfo{
 	int endTime ;
 };
 
+struct mediaInfo
+{
+	QString filePath ;
+	bool isVideo ;
+	int duration ;
+	int langCode ;
+};
+
 QString  createUuid() ;
 QString createSimpleUuid() ;
 int getMSec(QTime t) ;
